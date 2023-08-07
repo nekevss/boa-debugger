@@ -1,7 +1,7 @@
 import React from "react";
 import SandBox from "./SandBox";
 import DebugNav from "./DebugNav";
-import { evaluate, evaluate_with_debug_hooks } from "boa_wasm";
+import { evaluate, evaluate_with_debug_hooks } from "@/pkg";
 
 const initialCode = `function greet(targetName) {
     return 'Hello, ' + targetName + '!';
