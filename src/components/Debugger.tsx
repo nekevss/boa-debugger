@@ -43,23 +43,33 @@ export default function Debugger() {
 
     const runEvaluate = () => {
         if (debugEval) {
-            const result = evaluate_with_debug_hooks(code, compiledOutputHook, traceOutputHook)
-            setOutput(result)
-            const debugValue = {
-                displayAsDebug: true,
-                compiled: compiledOutput.slice(0, compiledOutput.length),
-                trace: traceOutput.slice(0, traceOutput.length)
+            try {
+                const result = evaluate_with_debug_hooks(code, compiledOutputHook, traceOutputHook)
+                setOutput(result)
+                const debugValue = {
+                    displayAsDebug: true,
+                    compiled: compiledOutput.slice(0, compiledOutput.length),
+                    trace: traceOutput.slice(0, traceOutput.length)
+                }
+                setDebugState(debugValue);
+            } catch (e) {
+                console.error(e);
+                setOutput(`${e}`)
             }
-            setDebugState(debugValue);
         } else {
-            const result = evaluate(code);
-            setOutput(result)
+            try {
+                const result = evaluate(code);
+                setOutput(result)
+            } catch(e) {
+                console.error(e);
+                setOutput(`${e}`)
+            }
         }
     }
 
     React.useEffect(()=> {
         runEvaluate()
-    })
+    },[])
 
     return (
         <div className="flex flex-col h-screen w-screen">
