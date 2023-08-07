@@ -8,8 +8,8 @@ type DebugOutputProps = {
 export default function DebugOutput(props: DebugOutputProps) {
 
     return (
-        <div className={"flex flex-col bg-stone-200 text-slate-800 p-4"} style={{height: "calc(100vh - 3rem)", width: "35vw"}}>
-            <div className="h-1/6">
+        <div className={"flex h-96 lg:h-[calc(100vh-3rem)] w-screen lg:w-[35vw] flex-col bg-stone-200 text-slate-800 p-4"}>
+            <div className="h-24 lg:h-1/6">
                 <h1>Output</h1>
                 {`> ${props.output}`}
             </div>
