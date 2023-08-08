@@ -24,7 +24,7 @@ export default function CompiledDisplay(props: CompiledDisplayProps) {
     return(
         <div className="bg-stone-400 h-96 w-screen lg:h-[calc(100vh-3rem)] lg:w-[35vw]">
             <FunctionSelector focused={focused} setFocus={(s)=>{setFocused(s)}} idents={identifiers} />
-            <div className="h-80 w-screen lg:h-[calc(100vh-3rem)] lg:w-[35vw]">
+            <div className="h-80 w-screen lg:h-[calc(100vh-6rem)] lg:w-[35vw]">
                 <Editor
                     theme="vs-dark"
                     options={{minimap: {enabled:false}, domReadOnly:true }}

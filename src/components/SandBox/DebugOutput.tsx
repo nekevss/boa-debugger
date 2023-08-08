@@ -9,12 +9,12 @@ export default function DebugOutput(props: DebugOutputProps) {
 
     return (
         <div className={"flex h-96 lg:h-[calc(100vh-3rem)] w-screen lg:w-[35vw] flex-col bg-stone-200 text-slate-800 p-4"}>
-            <div className="h-24 lg:h-1/6">
+            <div className="h-24">
                 <h1>Output</h1>
                 {`> ${props.output}`}
             </div>
             {/* Below is not really ideal. Would be better served by better mapping from Boa's side though */}
-            <div className="border flex flex-col h-5/6 overflow-auto">
+            <div className="border flex flex-col h-5/6 lg:h-[calc(100vh-7rem)] overflow-auto">
                 {props.trace.map((value, idx)=>{
                     if (value.includes("Call Frame")) {
                         const callFrameName = /Call Frame -- (.*)(?= --)/gi;
