@@ -14,14 +14,13 @@ type SandBoxProps = {
 }
 
 function SandBox(props: SandBoxProps) {
-
     return (
         <div id="SandBox" className={"flex flex-col lg:flex-row h-min-content lg:h-screen w-screen"}>
-            <div className={`h-96 lg:h-[calc(100vh-3rem)] w-screen lg:w-[${props.asDebug ? "30vw" : "60vw"}]`}>
+            <div className={`h-96 lg:h-[calc(100vh-3rem)] w-screen ${props.asDebug ? "lg:w-[30vw]" : "lg:w-[60vw]"}`}>
                 <Editor
                     theme="vs-dark"
                     language="javascript"
-                    options={{ minimap: { enabled: false } }}
+                    options={{ minimap: { enabled: false }, automaticLayout: true }}
                     value={props.code}
                     onChange={(value)=>props.setCode(value)}
                 />

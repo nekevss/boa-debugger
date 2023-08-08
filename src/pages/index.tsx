@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from 'next/font/google'
-import Debugger from '@/components/Debugger'
+// import Debugger from '@/components/Debugger'
+import Debugger from "@/components/ExpirementalDebugger"
 
 const inter = Inter({ subsets: ['latin'] })
 
