@@ -3,7 +3,7 @@ import React from "react";
 type NavProps = {
     debug: boolean,
     setDebug: (arg: boolean) => void,
-    run: () => void, 
+    run: () => void,
 }
 
 export default function DebugNav(props: NavProps) {

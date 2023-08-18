@@ -11,15 +11,15 @@
     "url": "https://github.com/boa-dev/boa"
   },
   "files": [
-    "index_bg.wasm",
-    "index.js",
-    "index_bg.js",
-    "index.d.ts"
+    "boa_wasm_bg.wasm",
+    "boa_wasm.js",
+    "boa_wasm_bg.js",
+    "boa_wasm.d.ts"
   ],
-  "module": "index.js",
-  "types": "index.d.ts",
+  "module": "boa_wasm.js",
+  "types": "boa_wasm.d.ts",
   "sideEffects": [
-    "./index.js",
+    "./boa_wasm.js",
     "./snippets/*"
   ],
   "keywords": [
