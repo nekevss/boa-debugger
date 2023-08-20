@@ -1,7 +1,7 @@
 import React from "react";
 import SandBox from "./SandBox";
 import DebugNav from "./DebugNav";
-import { BoaJs } from "@/boa/experimental/pkg/index";
+import { BoaJs } from "@/boa/experimental/pkg/boa_wasm";
 
 const initialCode = `function greet(targetName) {
     return 'Hello, ' + targetName + '!';
