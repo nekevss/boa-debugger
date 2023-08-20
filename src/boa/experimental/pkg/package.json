@@ -5,7 +5,7 @@
   ],
   "description": "WASM compatibility layer for the Boa JavaScript engine.",
   "version": "0.17.0",
-  "license": "Unlicense/MIT",
+  "license": "Unlicense OR MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/boa-dev/boa"
