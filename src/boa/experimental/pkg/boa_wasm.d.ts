@@ -5,12 +5,20 @@
 export function main(): void;
 /**
 * Evaluate the given ECMAScript code.
+*
+* # Errors
+*
+* If the execution of the script throws, returns a `JsValue` with the error string.
 * @param {string} src
 * @returns {string}
 */
 export function evaluate(src: string): string;
 /**
 * Evaluate some JavaScript with trace hooks.
+*
+* # Errors
+*
+* If the execution of the script throws, returns a `JsValue` with the error string.
 * @param {string} src
 * @param {Function} compiled_output_action
 * @param {Function} trace_output_action
@@ -38,12 +46,20 @@ export class BoaJs {
   set_trace_output_action(f: Function): void;
 /**
 * Evaluate some Js Source Code with trace active.
+*
+* # Errors
+*
+* If the execution of the script throws, returns a `JsValue` with the error string.
 * @param {string} src
 * @returns {string}
 */
   evaluate_with_trace(src: string): string;
 /**
 * Evaluate Js Source code without running trace.
+*
+* # Errors
+*
+* If the execution of the script throws, returns a `JsValue` with the error string.
 * @param {string} src
 * @returns {string}
 */
